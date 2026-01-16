@@ -21,37 +21,37 @@
     <title>Top Trumps</title>
   </head>
   <body>
-    <header>
+    <header class="container text-center">
       <h1>Top Trumps</h1>
       <p>Rules</p>
-      <button>New Game</button>
+      <button class="btn btn-primary">New Game</button>
     </header>
 
     <!-- Game area -->
-    <main>
+    <main class="container">
       <!-- Cards container -->
-      <section>
+      <section class="d-flex flex-row justify-content-center gap-4 my-4">
         <!-- Player Card -->
-        <div>
-          <img />
-          <div>
-            <h4></h4>
+        <div class="card">
+          <img src="" class="card-img-top" alt="">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li class="attack">Attack <span>0</span></li>
+              <li class="defense">Defense <span>0</span></li>
+              <li class="speed">Speed <span>0</span></li>
             </ul>
           </div>
         </div>
         <!-- CPU Card-->
-        <div>
-          <img />
-          <div>
-            <h4></h4>
+        <div class="card">
+          <img src="" class="card-img-top" alt="">
+          <div class="card-body">
+            <h4 class="card-title"></h4>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li class="attack">Attack <span>0</span></li>
+              <li class="defense">Defense <span>0</span></li>
+              <li class="speed">Speed <span>0</span></li>
             </ul>
           </div>
         </div>
@@ -60,16 +60,16 @@
       <!-- Scores -->
       <section>
         <div>
-          <p></p>
+          <p>Player Score: <span>0</span></p>
         </div>
         <div>
-          <p></p>
+          <p>CPU Score: <span>0</span></p>
         </div>
       </section>
 
       <!-- Next turn button -->
       <div>
-        <button>Next Turn</button>
+        <button class="btn btn-primary">Next Turn</button>
       </div>
     </main>
 

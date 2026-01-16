@@ -22,42 +22,47 @@
     <!-- Game area -->
     <main class="container">
       <!-- Cards container -->
-      <section class="d-flex flex-row justify-content-center gap-4 my-4">
-        <!-- Player Card -->
-        <div class="card">
-          <img src="" class="card-img-top" alt="" />
-          <div class="card-body">
-            <h4 class="card-title"></h4>
-            <ul>
-              <li class="attack">Attack <span>0</span></li>
-              <li class="defence">Defence <span>0</span></li>
-              <li class="speed">Speed <span>0</span></li>
-            </ul>
+      <section class="d-flex justify-content-center gap-4 my-4">
+        <!-- Player column-->
+        <div class="d-flex flex-column align-items-center flex-fill">
+          <!-- Player Card -->
+          <div class="card">
+            <img src="" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <ul>
+                <li class="attack">Attack <span>0</span></li>
+                <li class="defence">Defence <span>0</span></li>
+                <li class="speed">Speed <span>0</span></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p>Player Score: <span>0</span></p>
           </div>
         </div>
-        <!-- CPU Card-->
-        <div class="card">
-          <img src="" class="card-img-top" alt="" />
-          <div class="card-body">
-            <h4 class="card-title"></h4>
-            <ul>
-              <li class="attack">Attack <span>0</span></li>
-              <li class="defence">Defence <span>0</span></li>
-              <li class="speed">Speed <span>0</span></li>
-            </ul>
+        <!-- CPU column-->
+        <div class="d-flex flex-column align-items-center flex-fill">
+          <!-- CPU Card-->
+          <div class="card">
+            <img src="" class="card-img-top" alt="" />
+            <div class="card-body">
+              <h4 class="card-title"></h4>
+              <ul>
+                <li class="attack">Attack <span>0</span></li>
+                <li class="defence">Defence <span>0</span></li>
+                <li class="speed">Speed <span>0</span></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p>CPU Score: <span>0</span></p>
           </div>
         </div>
       </section>
 
       <!-- Scores -->
-      <section>
-        <div>
-          <p>Player Score: <span>0</span></p>
-        </div>
-        <div>
-          <p>CPU Score: <span>0</span></p>
-        </div>
-      </section>
+      <section></section>
 
       <!-- Next turn button -->
       <div>

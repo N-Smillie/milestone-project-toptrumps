@@ -1,0 +1,14 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Caesar+Dressing&display=swap');
+
+/* Global styles */
+
+/* CSS Variables */
+
+:root {
+    --primary-font: 'Almendra', serif;
+    --secondary-font: 'Caesar Dressing', sans-serif;
+    --primary-color: ;
+    --secondary-color: ;
+    --highlight-color: ;
+}

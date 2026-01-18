@@ -8,7 +8,29 @@
 :root {
     --primary-font: 'Almendra', serif;
     --secondary-font: 'Caesar Dressing', sans-serif;
-    --primary-color: ;
-    --secondary-color: ;
-    --highlight-color: ;
+    --primary-color: #FAE7D6;
+    --secondary-color: #2D1906;
+    --card-color: #D6741A;
+    --button-color: #2B73B6;
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-font);
+}
+
+.btn {
+    background-color: var(--button-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.card {
+    background-color: var(--card-color);
+    border: 2px solid var(--secondary-color);
 }

@@ -49,3 +49,32 @@ h1, h2, h3, h4, h5, h6 {
     height: 200px;
     object-fit: cover;
 }
+
+h1 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card li {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-top: 1px solid var(--secondary-color);
+}
+
+.card li span {
+    font-weight: bold;
+}

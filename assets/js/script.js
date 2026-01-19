@@ -147,6 +147,8 @@ let playerDeck = [];
 let cpuDeck = [];
 let playerScore = 0;
 let cpuScore = 0;
+let CurrentPlayerCard = null;
+let CurrentCpuCard = null;
 
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
@@ -172,3 +174,20 @@ cpuDeck = decks.cpuDeck;
 
 console.log("Player Deck:", playerDeck);
 console.log("CPU Deck:", cpuDeck);
+
+// New Game Function
+function newGame() {
+    playerScore = 0;
+    cpuScore = 0;
+    playerScoreSpan.textContent = playerScore;
+    cpuScoreSpan.textContent = cpuScore;
+
+    const decks = createDecks(cardPool);
+    playerDeck = decks.playerDeck;
+    cpuDeck = decks.cpuDeck;
+    console.log("New Player Deck:", playerDeck);
+    console.log("New CPU Deck:", cpuDeck);
+}
+
+// Event Listeners
+newGameBtn.addEventListener("click", newGame);

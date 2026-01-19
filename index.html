@@ -16,7 +16,7 @@
     <header class="container text-center">
       <h1>Top Trumps</h1>
       <p>Select an attribute that you think will be higher than your opponent's. First to 5 points wins!</p>
-      <button class="btn btn-primary">New Game</button>
+      <button class="btn btn-primary" id="new-game-btn">New Game</button>
     </header>
 
     <!-- Game area -->
@@ -27,36 +27,36 @@
         <div class="d-flex flex-column align-items-center flex-fill">
           <!-- Player Card -->
           <div class="card">
-            <img src="assets/images/demon.jpg" class="card-img-top" alt="" />
+            <img src="assets/images/demon.jpg" id="player-card-img" class="card-img-top" alt="" />
             <div class="card-body">
-              <h4 class="card-title">Name</h4>
+              <h4 id="player-title" class="card-title">Name</h4>
               <ul>
-                <li class="attack">Attack <span>0</span></li>
-                <li class="defence">Defence <span>0</span></li>
-                <li class="speed">Speed <span>0</span></li>
+                <li class="attack">Attack <span id="player-attack">0</span></li>
+                <li class="defence">Defence <span id="player-defence">0</span></li>
+                <li class="speed">Speed <span id="player-speed">0</span></li>
               </ul>
             </div>
           </div>
           <div>
-            <p>Player Score: <span>0</span></p>
+            <p>Player Score: <span id="player-score">0</span></p>
           </div>
         </div>
         <!-- CPU column-->
         <div class="d-flex flex-column align-items-center flex-fill">
           <!-- CPU Card-->
           <div class="card">
-            <img src="assets/images/frog.jpg" class="card-img-top" alt="" />
+            <img src="assets/images/frog.jpg" id="cpu-card-img" class="card-img-top" alt="" />
             <div class="card-body">
-              <h4 class="card-title">Name</h4>
+              <h4 id="cpu-title" class="card-title">Name</h4>
               <ul>
-                <li class="attack">Attack <span>0</span></li>
-                <li class="defence">Defence <span>0</span></li>
-                <li class="speed">Speed <span>0</span></li>
+                <li class="attack">Attack <span id="cpu-attack">0</span></li>
+                <li class="defence">Defence <span id="cpu-defence">0</span></li>
+                <li class="speed">Speed <span id="cpu-speed">0</span></li>
               </ul>
             </div>
           </div>
           <div>
-            <p>CPU Score: <span>0</span></p>
+            <p>CPU Score: <span id="cpu-score">0</span></p>
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@
 
       <!-- Next turn button -->
       <div class="text-center">
-        <button class="btn btn-primary">Next Turn</button>
+        <button class="btn btn-primary" id="next-turn-button">Next Turn</button>
       </div>
     </main>
 

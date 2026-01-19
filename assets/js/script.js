@@ -1,3 +1,4 @@
+// Array of card objects
 const cardPool = [
 {   image: "assets/images/demon.jpg",
     title: "Demon",
@@ -120,3 +121,26 @@ const cardPool = [
     speed: 39,
 },
 ]
+
+// Function to shuffle the deck using Fisher-Yates shuffle
+function shuffleDeck(deck) {
+    for (let i = deck.length - 1; i > 0; i--) {
+        const randomIndex = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[randomIndex]] = [deck[randomIndex], deck[i]];
+    }
+}
+
+// Creating deck for player and CPU
+function createDecks(cardPool) {
+    shuffleDeck(deck);
+    const deck = [...cardPool];
+    const half = deck.length / 2;
+    const playerDeck = deck.slice(0, half);
+    const cpuDeck = deck.slice(half);
+    return {playerDeck, cpuDeck};
+}
+
+const {playerDeck, cpuDeck} = createDecks(cardPool);
+
+console.log("Player Deck:", playerDeck);
+console.log("CPU Deck:", cpuDeck);

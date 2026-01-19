@@ -122,6 +122,27 @@ const cardPool = [
 },
 ]
 
+// Buttons
+const newGameBtn = document.getElementById("new-game-btn");
+const nextTurnBtn = document.getElementById("next-turn-btn");
+
+// Player Card
+const playerImg = document.getElementById("player-card-img");
+const playerTitle = document.getElementById("player-title");
+const playerAttack = document.getElementById("player-attack");
+const playerDefence = document.getElementById("player-defence");
+const playerSpeed = document.getElementById("player-speed");
+const playerScoreSpan = document.getElementById("player-score");
+
+// CPU Card
+const cpuImg = document.getElementById("cpu-card-img");
+const cpuTitle = document.getElementById("cpu-title");
+const cpuAttack = document.getElementById("cpu-attack");
+const cpuDefence = document.getElementById("cpu-defence");
+const cpuSpeed = document.getElementById("cpu-speed");
+const cpuScoreSpan = document.getElementById("cpu-score");
+
+
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {

@@ -142,6 +142,11 @@ const cpuDefence = document.getElementById("cpu-defence");
 const cpuSpeed = document.getElementById("cpu-speed");
 const cpuScoreSpan = document.getElementById("cpu-score");
 
+// Game state
+let playerDeck = [];
+let cpuDeck = [];
+let playerScore = 0;
+let cpuScore = 0;
 
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
@@ -153,15 +158,17 @@ function shuffleDeck(deck) {
 
 // Creating deck for player and CPU
 function createDecks(cardPool) {
-    shuffleDeck(deck);
     const deck = [...cardPool];
+    shuffleDeck(deck);
     const half = deck.length / 2;
     const playerDeck = deck.slice(0, half);
     const cpuDeck = deck.slice(half);
     return {playerDeck, cpuDeck};
 }
 
-const {playerDeck, cpuDeck} = createDecks(cardPool);
+const decks = createDecks(cardPool);
+playerDeck = decks.playerDeck;
+cpuDeck = decks.cpuDeck;
 
 console.log("Player Deck:", playerDeck);
 console.log("CPU Deck:", cpuDeck);

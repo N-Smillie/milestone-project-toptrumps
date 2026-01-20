@@ -141,6 +141,8 @@ const cpuAttack = document.getElementById("cpu-attack");
 const cpuDefence = document.getElementById("cpu-defence");
 const cpuSpeed = document.getElementById("cpu-speed");
 const cpuScoreSpan = document.getElementById("cpu-score");
+const cpuCardBody = document.getElementById("cpu-card-body");
+
 
 // Game state
 let playerDeck = [];
@@ -187,6 +189,12 @@ function newGame() {
     cpuDeck = decks.cpuDeck;
     console.log("New Player Deck:", playerDeck);
     console.log("New CPU Deck:", cpuDeck);
+}
+
+// Hide CPU card function
+function hideCpuCard() {
+    cpuImg.src = "assets/images/card-back.png";
+    cpuCardBody.classList.add("hidden");
 }
 
 // Event Listeners

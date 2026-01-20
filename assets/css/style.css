@@ -78,3 +78,8 @@ p {
 .card li span {
     font-weight: bold;
 }
+
+/* to hide CPU attributes and image until after player has made a choice */
+.hidden {
+    display: none;
+}

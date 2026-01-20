@@ -149,8 +149,8 @@ let playerDeck = [];
 let cpuDeck = [];
 let playerScore = 0;
 let cpuScore = 0;
-let CurrentPlayerCard = null;
-let CurrentCpuCard = null;
+let currentPlayerCard = null;
+let currentCpuCard = null;
 
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
@@ -189,12 +189,14 @@ function newGame() {
     cpuDeck = decks.cpuDeck;
     console.log("New Player Deck:", playerDeck);
     console.log("New CPU Deck:", cpuDeck);
+
+    drawInitialCards();
 }
 
 // Draw initial cards function
 function drawInitialCards() {
-    CurrentPlayerCard = playerDeck.pop();
-    CurrentCpuCard = cpuDeck.pop();
+    currentPlayerCard = playerDeck.pop();
+    currentCpuCard = cpuDeck.pop();
 
     // Show player card
     showPlayerCard();
@@ -203,10 +205,31 @@ function drawInitialCards() {
     hideCpuCard();
 }
 
+// Show Player card function
+function showPlayerCard() {
+    playerImg.src = currentPlayerCard.image;
+    playerTitle.textContent = currentPlayerCard.title;
+    playerAttack.textContent = currentPlayerCard.attack;
+    playerDefence.textContent = currentPlayerCard.defence;
+    playerSpeed.textContent = currentPlayerCard.speed;
+}
+
 // Hide CPU card function
 function hideCpuCard() {
     cpuImg.src = "assets/images/card-back.png";
     cpuCardBody.classList.add("hidden");
+}
+
+// Show CPU card function
+function showCpuCard() {
+    cpuImg.src = currentCpuCard.image;
+    cpuTitle.textContent = currentCpuCard.title;
+    cpuAttack.textContent = currentCpuCard.attack;
+    cpuDefence.textContent = currentCpuCard.defence;
+    cpuSpeed.textContent = currentCpuCard.speed;
+
+    // Reveal CPU card attributes
+    cpuCardBody.classList.remove("hidden");
 }
 
 // Event Listeners

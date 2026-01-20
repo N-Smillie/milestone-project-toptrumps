@@ -191,6 +191,18 @@ function newGame() {
     console.log("New CPU Deck:", cpuDeck);
 }
 
+// Draw initial cards function
+function drawInitialCards() {
+    CurrentPlayerCard = playerDeck.pop();
+    CurrentCpuCard = cpuDeck.pop();
+
+    // Show player card
+    showPlayerCard();
+
+    // Hide CPU card
+    hideCpuCard();
+}
+
 // Hide CPU card function
 function hideCpuCard() {
     cpuImg.src = "assets/images/card-back.png";

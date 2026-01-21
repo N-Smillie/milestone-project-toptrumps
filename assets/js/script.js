@@ -250,9 +250,12 @@ function selectAttribute(attribute) {
 
 // Next Turn Function
 function nextTurn() {
-    
+
 }
 
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
 nextTurnBtn.addEventListener("click", nextTurn);
+playerAttack.addEventListener("click", selectAttribute("attack"));
+playerDefence.addEventListener("click", selectAttribute("defence"));
+playerSpeed.addEventListener("click", selectAttribute("speed"));

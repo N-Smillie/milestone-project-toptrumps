@@ -248,5 +248,11 @@ function selectAttribute(attribute) {
     }
 }
 
+// Next Turn Function
+function nextTurn() {
+    
+}
+
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
+nextTurnBtn.addEventListener("click", nextTurn);

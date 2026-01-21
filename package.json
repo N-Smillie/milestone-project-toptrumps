@@ -1,0 +1,24 @@
+{
+  "name": "milestone-project-toptrumps",
+  "version": "1.0.0",
+  "description": "Milestone Project: Top Trumps Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N-Smillie/milestone-project-toptrumps.git"
+  },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/N-Smillie/milestone-project-toptrumps/issues"
+  },
+  "homepage": "https://github.com/N-Smillie/milestone-project-toptrumps#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}

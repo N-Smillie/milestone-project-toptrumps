@@ -133,7 +133,6 @@ const playerAttack = document.getElementById("player-attack");
 const playerDefence = document.getElementById("player-defence");
 const playerSpeed = document.getElementById("player-speed");
 const playerScoreSpan = document.getElementById("player-score");
-const playerAttributes = document.querySelectorAll("#player-attack, #player-defence, #player-speed");
 
 // CPU Card
 const cpuImg = document.getElementById("cpu-card-img");
@@ -256,6 +255,12 @@ function nextTurn() {
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
 nextTurnBtn.addEventListener("click", nextTurn);
-playerAttack.addEventListener("click", selectAttribute("attack"));
-playerDefence.addEventListener("click", selectAttribute("defence"));
-playerSpeed.addEventListener("click", selectAttribute("speed"));
+playerAttack.addEventListener("click", () => {
+    selectAttribute("attack");
+});
+playerDefence.addEventListener("click", () => {
+    selectAttribute("defence");
+});
+playerSpeed.addEventListener("click", () => {
+    selectAttribute("speed");
+});

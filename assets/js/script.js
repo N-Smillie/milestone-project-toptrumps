@@ -133,6 +133,7 @@ const playerAttack = document.getElementById("player-attack");
 const playerDefence = document.getElementById("player-defence");
 const playerSpeed = document.getElementById("player-speed");
 const playerScoreSpan = document.getElementById("player-score");
+const playerAttributes = document.querySelectorAll("#player-attack, #player-defence, #player-speed");
 
 // CPU Card
 const cpuImg = document.getElementById("cpu-card-img");
@@ -230,6 +231,21 @@ function showCpuCard() {
 
     // Reveal CPU card attributes
     cpuCardBody.classList.remove("hidden");
+}
+
+// Attribute selection and comparison function
+function selectAttribute(attribute) {
+    showCpuCard();
+    const playerValue = currentPlayerCard[attribute];
+    const cpuValue = currentCpuCard[attribute];
+
+    if (playerValue > cpuValue) {
+        playerScore++;
+        playerScoreSpan.textContent = playerScore;
+    } else if (cpuValue > playerValue) {
+        cpuScore++;
+        cpuScoreSpan.textContent = cpuScore;
+    }
 }
 
 // Event Listeners

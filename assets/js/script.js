@@ -195,14 +195,9 @@ function newGame() {
 
 // Draw initial cards function
 function drawInitialCards() {
-    currentPlayerCard = playerDeck.pop();
-    currentCpuCard = cpuDeck.pop();
-
-    // Show player card
-    showPlayerCard();
-
-    // Hide CPU card
-    hideCpuCard();
+    if (playerDeck.length === 0 || cpuDeck.length === 0) {
+        drawCards();
+    }
 }
 
 // Show Player card function

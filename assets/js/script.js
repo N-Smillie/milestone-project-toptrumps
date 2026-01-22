@@ -247,9 +247,18 @@ function selectAttribute(attribute) {
     }
 }
 
+// Draw Cards function
+function drawCards () {
+    currentPlayerCard = playerDeck.pop();
+    currentCpuCard = cpuDeck.pop();
+    
+    showPlayerCard();
+    hideCpuCard();
+}
+
 // Next Turn Function
 function nextTurn() {
-
+    drawCards();
 }
 
 // Event Listeners

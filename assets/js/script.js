@@ -190,7 +190,7 @@ function newGame() {
     console.log("New Player Deck:", playerDeck);
     console.log("New CPU Deck:", cpuDeck);
 
-    drawInitialCards();
+    drawCards();
 }
 
 // Draw initial cards function

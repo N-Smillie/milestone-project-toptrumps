@@ -129,10 +129,13 @@ const nextTurnBtn = document.getElementById("next-turn-btn");
 // Player Card
 const playerImg = document.getElementById("player-card-img");
 const playerTitle = document.getElementById("player-title");
-const playerAttack = document.getElementById("player-attack-li");
-const playerDefence = document.getElementById("player-defence-li");
-const playerSpeed = document.getElementById("player-speed-li");
+const playerAttack = document.getElementById("player-attack");
+const playerDefence = document.getElementById("player-defence");
+const playerSpeed = document.getElementById("player-speed");
 const playerScoreSpan = document.getElementById("player-score");
+const playerAttackLi = document.getElementById("player-attack-li");
+const playerDefenceLi = document.getElementById("player-defence-li");
+const playerSpeedLi = document.getElementById("player-speed-li");
 
 // CPU Card
 const cpuImg = document.getElementById("cpu-card-img");
@@ -285,19 +288,19 @@ function endGame() {
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
 nextTurnBtn.addEventListener("click", nextTurn);
-playerAttack.addEventListener("click", () => {
+playerAttackLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("attack");
         playerCanTakeTurn = false;
     }
 });
-playerDefence.addEventListener("click", () => {
+playerDefenceLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("defence");
         playerCanTakeTurn = false;
     }
 });
-playerSpeed.addEventListener("click", () => {
+playerSpeedLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("speed");
         playerCanTakeTurn = false;

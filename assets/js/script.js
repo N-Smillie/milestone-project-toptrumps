@@ -242,6 +242,7 @@ function selectAttribute(attribute) {
         cpuScore++;
         cpuScoreSpan.textContent = cpuScore;
     }
+    checkForWinner();
 }
 
 // Draw Cards function

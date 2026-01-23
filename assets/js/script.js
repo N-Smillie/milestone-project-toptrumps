@@ -129,9 +129,9 @@ const nextTurnBtn = document.getElementById("next-turn-btn");
 // Player Card
 const playerImg = document.getElementById("player-card-img");
 const playerTitle = document.getElementById("player-title");
-const playerAttack = document.getElementById("player-attack");
-const playerDefence = document.getElementById("player-defence");
-const playerSpeed = document.getElementById("player-speed");
+const playerAttack = document.getElementById("player-attack-li");
+const playerDefence = document.getElementById("player-defence-li");
+const playerSpeed = document.getElementById("player-speed-li");
 const playerScoreSpan = document.getElementById("player-score");
 
 // CPU Card

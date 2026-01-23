@@ -151,6 +151,8 @@ let playerScore = 0;
 let cpuScore = 0;
 let currentPlayerCard = null;
 let currentCpuCard = null;
+let playerCanTakeTurn = true;
+
 
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
@@ -254,17 +256,27 @@ function drawCards () {
 // Next Turn Function
 function nextTurn() {
     drawCards();
+    playerCanTakeTurn = true;
 }
 
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
 nextTurnBtn.addEventListener("click", nextTurn);
 playerAttack.addEventListener("click", () => {
-    selectAttribute("attack");
+	if (playerCanTakeTurn) {
+        selectAttribute("attack");
+        playerCanTakeTurn = false;
+    }
 });
 playerDefence.addEventListener("click", () => {
-    selectAttribute("defence");
+	if (playerCanTakeTurn) {
+        selectAttribute("defence");
+        playerCanTakeTurn = false;
+    }
 });
 playerSpeed.addEventListener("click", () => {
-    selectAttribute("speed");
+	if (playerCanTakeTurn) {
+        selectAttribute("speed");
+        playerCanTakeTurn = false;
+    }
 });

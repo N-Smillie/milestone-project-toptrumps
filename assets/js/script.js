@@ -259,6 +259,28 @@ function nextTurn() {
     playerCanTakeTurn = true;
 }
 
+// Check for winner function
+function checkForWinner() {
+    if (playerScore >= 5) {
+        endGame();
+    }
+    else if (cpuScore >= 5) {
+        endGame();
+}
+}
+
+// End Game function
+function endGame() {
+    if (playerScore > cpuScore) {
+        // modal to show winner
+    }
+    else if (cpuScore > playerScore) {
+        // modal to show winner
+    }
+    playerCanTakeTurn = false;
+    nextTurnBtn.disabled = true;
+}
+
 // Event Listeners
 newGameBtn.addEventListener("click", newGame);
 nextTurnBtn.addEventListener("click", nextTurn);

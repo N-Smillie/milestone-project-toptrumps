@@ -261,6 +261,7 @@ function drawCards () {
 function nextTurn() {
     drawCards();
     playerCanTakeTurn = true;
+    nextTurnBtn.classList.add('hidden');
 }
 
 // Check for winner function
@@ -292,17 +293,20 @@ playerAttackLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("attack");
         playerCanTakeTurn = false;
+        nextTurnBtn.classList.remove('hidden');
     }
 });
 playerDefenceLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("defence");
         playerCanTakeTurn = false;
+        nextTurnBtn.classList.remove('hidden');
     }
 });
 playerSpeedLi.addEventListener("click", () => {
 	if (playerCanTakeTurn) {
         selectAttribute("speed");
         playerCanTakeTurn = false;
+        nextTurnBtn.classList.remove('hidden');
     }
 });

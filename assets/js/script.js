@@ -187,6 +187,10 @@ function newGame() {
     playerScoreSpan.textContent = playerScore;
     cpuScoreSpan.textContent = cpuScore;
 
+    // Remove win/lose classes from previous game
+    document.querySelectorAll('.player-card li, .cpu-card li')
+        .forEach(li => li.classList.remove('win', 'lose'));
+
     const decks = createDecks(cardPool);
     playerDeck = decks.playerDeck;
     cpuDeck = decks.cpuDeck;

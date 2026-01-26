@@ -265,6 +265,10 @@ function nextTurn() {
     drawCards();
     playerCanTakeTurn = true;
     nextTurnBtn.classList.add('hidden');
+
+    // Remove win/lose classes from previous round
+    document.querySelectorAll('.player-card li, .cpu-card li')
+        .forEach(li => li.classList.remove('win', 'lose'));
 }
 
 // Check for winner function

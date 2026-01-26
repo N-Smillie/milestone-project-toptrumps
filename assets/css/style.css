@@ -83,3 +83,12 @@ p {
 .hidden {
     display: none;
 }
+
+/* Highlight winning score */
+li.win {
+    color: green;
+}
+
+li.lose {
+    color: red;
+}

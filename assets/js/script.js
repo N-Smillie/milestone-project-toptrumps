@@ -179,8 +179,6 @@ const decks = createDecks(cardPool);
 playerDeck = decks.playerDeck;
 cpuDeck = decks.cpuDeck;
 
-console.log("Player Deck:", playerDeck);
-console.log("CPU Deck:", cpuDeck);
 
 // New Game Function
 function newGame() {
@@ -192,8 +190,6 @@ function newGame() {
     const decks = createDecks(cardPool);
     playerDeck = decks.playerDeck;
     cpuDeck = decks.cpuDeck;
-    console.log("New Player Deck:", playerDeck);
-    console.log("New CPU Deck:", cpuDeck);
 
     drawCards();
 }
@@ -238,12 +234,19 @@ function selectAttribute(attribute) {
     const playerValue = currentPlayerCard[attribute];
     const cpuValue = currentCpuCard[attribute];
 
+    const playerLi = document.querySelector(`.player-card .${attribute}`);
+    const cpuLi = document.querySelector(`.cpu-card .${attribute}`);
+
     if (playerValue > cpuValue) {
         playerScore++;
         playerScoreSpan.textContent = playerScore;
+        playerLi.classList.add("win");
+        cpuLi.classList.add("lose");
     } else if (cpuValue > playerValue) {
         cpuScore++;
         cpuScoreSpan.textContent = cpuScore;
+        playerLi.classList.add("lose");
+        cpuLi.classList.add("win");
     }
     checkForWinner();
 }

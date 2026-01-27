@@ -187,6 +187,11 @@ function newGame() {
     playerScoreSpan.textContent = playerScore;
     cpuScoreSpan.textContent = cpuScore;
 
+    // Reset game state
+    playerCanTakeTurn = true;
+    nextTurnBtn.disabled = false;
+    nextTurnBtn.classList.add('hidden');
+
     // Remove win/lose classes from previous game
     document.querySelectorAll('.player-card li, .cpu-card li')
         .forEach(li => li.classList.remove('win', 'lose'));
@@ -196,6 +201,8 @@ function newGame() {
     cpuDeck = decks.cpuDeck;
 
     drawCards();
+
+    hideCpuCard();
 }
 
 // Draw initial cards function

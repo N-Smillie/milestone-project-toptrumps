@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,10 @@
   <body>
     <header class="container text-center">
       <h1>Top Trumps</h1>
-      <p>Select an attribute that you think will be higher than your opponent's. First to 5 points wins!</p>
+      <p>
+        Select an attribute that you think will be higher than your opponent's.
+        First to 5 points wins!
+      </p>
       <button class="btn btn-primary" id="new-game-btn">New Game</button>
     </header>
 
@@ -31,9 +34,15 @@
             <div class="card-body">
               <h4 id="player-title" class="card-title">Name</h4>
               <ul>
-                <li id="player-attack-li" class="attack">Attack <span id="player-attack">0</span></li>
-                <li id="player-defence-li" class="defence">Defence <span id="player-defence">0</span></li>
-                <li id="player-speed-li" class="speed">Speed <span id="player-speed">0</span></li>
+                <li id="player-attack-li" class="attack">
+                  Attack <span id="player-attack">0</span>
+                </li>
+                <li id="player-defence-li" class="defence">
+                  Defence <span id="player-defence">0</span>
+                </li>
+                <li id="player-speed-li" class="speed">
+                  Speed <span id="player-speed">0</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -66,9 +75,41 @@
 
       <!-- Next turn button -->
       <div class="text-center mt-4">
-        <button class="btn btn-primary hidden" id="next-turn-btn">Next Turn</button>
+        <button class="btn btn-primary hidden" id="next-turn-btn">
+          Next Turn
+        </button>
       </div>
     </main>
+
+    <!-- Modal for game result -->
+    <div class="modal" id="game-result-modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="game-result-title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="game-result-message"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="new-game-btn">New Game</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

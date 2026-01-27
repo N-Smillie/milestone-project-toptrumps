@@ -277,6 +277,7 @@ function nextTurn() {
 
 // Check for winner function
 function checkForWinner() {
+
     if (playerScore >= 5) {
         endGame();
     }
@@ -287,11 +288,23 @@ function checkForWinner() {
 
 // End Game function
 function endGame() {
+    const modalEl = document.getElementById('game-result-modal');
+    const modalTitle = document.getElementById('game-result-title');
+    const modalMessage = document.getElementById('game-result-message');
+
+    const modal = new bootstrap.Modal(modalEl);
+
     if (playerScore > cpuScore) {
-        // modal to show winner
+        modalTitle.textContent = "You Win!";
+        modalMessage.textContent = "Congratulations, you won the game!";
+
+        modal.show();
     }
     else if (cpuScore > playerScore) {
-        // modal to show winner
+        modalTitle.textContent = "CPU Wins!";
+        modalMessage.textContent = "Sorry, you lost the game.";
+
+        modal.show();
     }
     playerCanTakeTurn = false;
     nextTurnBtn.disabled = true;

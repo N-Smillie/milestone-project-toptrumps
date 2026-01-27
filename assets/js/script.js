@@ -122,6 +122,9 @@ const cardPool = [
 },
 ]
 
+// Wait for the DOM to finish loading before running the game
+document.addEventListener("DOMContentLoaded", () => {
+
 // Buttons
 const newGameBtn = document.getElementById("new-game-btn");
 const nextTurnBtn = document.getElementById("next-turn-btn");
@@ -146,6 +149,9 @@ const cpuSpeed = document.getElementById("cpu-speed");
 const cpuScoreSpan = document.getElementById("cpu-score");
 const cpuCardBody = document.getElementById("cpu-card-body");
 
+// Modal
+const modalEl = document.getElementById('game-result-modal');
+const gameResultModal = new bootstrap.Modal(modalEl);
 
 // Game state
 let playerDeck = [];
@@ -203,6 +209,9 @@ function newGame() {
     drawCards();
 
     hideCpuCard();
+
+    // Close modal if open
+    gameResultModal.hide();
 }
 
 // Draw initial cards function
@@ -295,26 +304,21 @@ function checkForWinner() {
 
 // End Game function
 function endGame() {
-    const modalEl = document.getElementById('game-result-modal');
     const modalTitle = document.getElementById('game-result-title');
     const modalMessage = document.getElementById('game-result-message');
-
-    const modal = new bootstrap.Modal(modalEl);
 
     if (playerScore > cpuScore) {
         modalTitle.textContent = "You Win!";
         modalMessage.textContent = "Congratulations, you won the game!";
-
-        modal.show();
     }
     else if (cpuScore > playerScore) {
         modalTitle.textContent = "CPU Wins!";
         modalMessage.textContent = "Sorry, you lost the game.";
-
-        modal.show();
     }
     playerCanTakeTurn = false;
     nextTurnBtn.disabled = true;
+
+    gameResultModal.show()
 }
 
 // Event Listeners
@@ -341,3 +345,5 @@ playerSpeedLi.addEventListener("click", () => {
         nextTurnBtn.classList.remove('hidden');
     }
 });
+
+}); // End of DOMContentLoaded event listener

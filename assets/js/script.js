@@ -153,6 +153,12 @@ const cpuCardBody = document.getElementById("cpu-card-body");
 const modalEl = document.getElementById('game-result-modal');
 const gameResultModal = new bootstrap.Modal(modalEl);
 
+// Restart game when modal is closed
+modalEl.addEventListener('hidden.bs.modal', () => {
+        newGame();
+    });
+
+
 // Game state
 let playerDeck = [];
 let cpuDeck = [];
@@ -209,9 +215,6 @@ function newGame() {
     drawCards();
 
     hideCpuCard();
-
-    // Close modal if open
-    gameResultModal.hide();
 }
 
 // Draw initial cards function

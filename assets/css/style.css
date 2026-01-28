@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     font-weight: bold;
     text-transform: uppercase;
+    min-height: 520px;
 }
 
 /* Body */
@@ -99,6 +100,13 @@ p {
 .hidden {
     display: none;
 }
+
+.player-card li:hover {
+    cursor: pointer;
+    background-color: rgba(45, 25, 6, 0.1);
+    border-radius: 8px;
+}
+
 
 /* Highlight winning score */
 li.win {

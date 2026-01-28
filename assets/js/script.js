@@ -235,7 +235,7 @@ function showPlayerCard() {
 
 // Hide CPU card function
 function hideCpuCard() {
-    cpuImg.src = "assets/images/card-back.png";
+    cpuImg.classList.add("hidden");
     cpuCardBody.classList.add("hidden");
 }
 
@@ -248,6 +248,7 @@ function showCpuCard() {
     cpuSpeed.textContent = currentCpuCard.speed;
 
     // Reveal CPU card attributes
+    cpuImg.classList.remove("hidden");
     cpuCardBody.classList.remove("hidden");
 }
 

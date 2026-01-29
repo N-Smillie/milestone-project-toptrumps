@@ -128,9 +128,18 @@ li.lose {
 /* Button styles */
 
 /* Modal styles */
+.modal-content {
+    border-radius: 14px;
+    border: 3px solid var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.modal-title {
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+}
 
 /* Media Queries */
-
 @media (max-width: 576px) {
     header p {
         font-size: 1.2rem;

@@ -30,6 +30,12 @@ h1, h2, h3, h4, h5, h6 {
     border: 2px solid var(--secondary-color);
 }
 
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 4px 4px 4px #1a3a5a;
+}
+
 .card {
     background-color: var(--card-color);
     border: 8px solid var(--secondary-color);
@@ -124,8 +130,6 @@ li.lose {
     box-shadow: inset 0 0 0 2px #5a0b0b;
     border-radius: 6px;
 }
-
-/* Button styles */
 
 /* Modal styles */
 .modal-content {

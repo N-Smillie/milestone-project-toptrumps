@@ -124,3 +124,17 @@ li.lose {
     box-shadow: inset 0 0 0 2px #5a0b0b;
     border-radius: 6px;
 }
+
+/* Media Queries */
+
+@media (max-width: 576px) {
+    header p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+}

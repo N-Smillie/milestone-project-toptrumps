@@ -149,6 +149,11 @@ const cpuSpeed = document.getElementById("cpu-speed");
 const cpuScoreSpan = document.getElementById("cpu-score");
 const cpuCardBody = document.getElementById("cpu-card-body");
 
+// Remove revealed class from cards at start
+document.querySelector('.player-card').classList.remove('revealed');
+document.querySelector('.cpu-card').classList.remove('revealed');
+
+
 // Modal
 const modalEl = document.getElementById('game-result-modal');
 const gameResultModal = new bootstrap.Modal(modalEl);
@@ -194,6 +199,9 @@ cpuDeck = decks.cpuDeck;
 
 // New Game Function
 function newGame() {
+    document.querySelector('.player-card').classList.remove('revealed');
+    document.querySelector('.cpu-card').classList.remove('revealed');
+
     playerScore = 0;
     cpuScore = 0;
     playerScoreSpan.textContent = playerScore;
@@ -226,6 +234,8 @@ function drawInitialCards() {
 
 // Show Player card function
 function showPlayerCard() {
+    document.querySelector('.player-card').classList.add('revealed');
+
     playerImg.src = currentPlayerCard.image;
     playerTitle.textContent = currentPlayerCard.title;
     playerAttack.textContent = currentPlayerCard.attack;
@@ -241,6 +251,8 @@ function hideCpuCard() {
 
 // Show CPU card function
 function showCpuCard() {
+    document.querySelector('.cpu-card').classList.add('revealed');
+
     cpuImg.src = currentCpuCard.image;
     cpuTitle.textContent = currentCpuCard.title;
     cpuAttack.textContent = currentCpuCard.attack;
@@ -286,6 +298,8 @@ function drawCards () {
 
 // Next Turn Function
 function nextTurn() {
+    document.querySelector('.player-card').classList.remove('revealed');
+    document.querySelector('.cpu-card').classList.remove('revealed');
     drawCards();
     playerCanTakeTurn = true;
     nextTurnBtn.classList.add('hidden');

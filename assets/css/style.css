@@ -54,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 300px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .card-img-top {
@@ -62,6 +63,38 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 3px solid var(--secondary-color);
     background: linear-gradient(90deg,rgba(84, 160, 214, 1) 0%, rgba(240, 230, 230, 1) 50%, rgba(53, 132, 222, 1) 100%);
     padding: 8px;
+}
+
+/* Card Back Styling */
+.card-back {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, #00D4FF, #090979),
+        repeating-linear-gradient(
+            45deg,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0.05) 10px,
+            transparent 10px,
+            transparent 20px
+        );
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 6px solid var(--secondary-color);
+}
+
+/* Card back title */
+.card-back span {
+    font-family: var(--secondary-font);
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+/* Hide card back when revealed */
+.card.revealed .card-back {
+    display: none;
 }
 
 

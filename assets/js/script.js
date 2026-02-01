@@ -235,13 +235,6 @@ function newGame() {
     scrollToPlayerCard();
 }
 
-// Draw initial cards function
-function drawInitialCards() {
-    if (playerDeck.length === 0 || cpuDeck.length === 0) {
-        drawCards();
-    }
-}
-
 // Show Player card function
 function showPlayerCard() {
     document.querySelector('.player-card').classList.add('revealed');

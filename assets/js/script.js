@@ -173,6 +173,14 @@ let currentPlayerCard = null;
 let currentCpuCard = null;
 let playerCanTakeTurn = true;
 
+// Function to focus on player card
+function scrollToPlayerCard() {
+    document.querySelector('.player-card').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
 
 // Function to shuffle the deck using Fisher-Yates shuffle
 function shuffleDeck(deck) {
@@ -223,6 +231,8 @@ function newGame() {
     drawCards();
 
     hideCpuCard();
+
+    scrollToPlayerCard();
 }
 
 // Draw initial cards function
@@ -307,6 +317,8 @@ function nextTurn() {
     // Remove win/lose classes from previous round
     document.querySelectorAll('.player-card li, .cpu-card li')
         .forEach(li => li.classList.remove('win', 'lose'));
+
+    scrollToPlayerCard();
 }
 
 // Check for winner function

@@ -120,7 +120,7 @@ const cardPool = [
     defence: 43,
     speed: 39,
 },
-]
+];
 
 // Wait for the DOM to finish loading before running the game
 document.addEventListener("DOMContentLoaded", () => {
